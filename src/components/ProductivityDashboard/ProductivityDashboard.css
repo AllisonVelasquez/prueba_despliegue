@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+
+@font-face {
+  font-family: "Dosis";
+  src: url("../../assets/Dosis-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../../assets/Poppins-SemiBold.ttf") format("truetype");
+}
+
+body {
+  background-color: #1d1f2bff;
+  font-family: "Poppins", "Helvetica Neue", "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Cambia a flex-start para evitar conflictos en pantallas pequeñas */
+  min-height: 100vh;
+  margin: 0;
+  padding: 10px; /* Espaciado para evitar que elementos toquen el borde en móviles */
+}
+
+.app {
+  width: 100%; /* Por defecto ocupa toda la pantalla */
+  max-height: 90vh;
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-edit {
+  display: flex;
+  flex-direction: column; /* Mobile-first: stackea los elementos */
+  background-color: #2f313eff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Usa todo el ancho en móvil */
+}
+
+.input-title,
+.input-description {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background: #2f313eff;
+  margin-bottom: 10px;
+  padding: 10px 0;
+  font-size: 16px; /* Tamaño más pequeño para móviles */
+  outline: none;
+  color: #e0e0e0;
+  font-weight: 500;
+}
+
+.input-title {
+  font-weight: 600;
+}
+
+.input-title:focus,
+.input-description:focus {
+  border-bottom: 2px solid #d9aa00;
+}
+
+.button-container {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end; /* Alinea el botón al final */
+}
+
+.add-button {
+  background-color: #ca9e00;
+  border: none;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-button:hover {
+  background-color: #d9aa00;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  max-height: calc(80vh - 100px);
+  padding: 10px 0;
+}
+
+.task-list::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.task-list {
+  padding-bottom: 64px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.task-card {
+  display: flex;
+  flex-direction: column; /* Mobile-first: stackea contenido */
+  align-items: flex-start;
+  color: #e0e0e0;
+  background-color: #2f313eff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-card.completed {
+  background-color: #3d5135;
+}
+
+.custom-checkbox {
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
+  border: 2px solid #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px; /* Espacio en móviles */
+}
+
+.task-content {
+  margin: 0;
+  font-size: 16px; /* Tamaño reducido para móviles */
+}
+
+.title {
+  font-size: 20px; /* Tamaño reducido */
+  font-weight: 600;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.descrip {
+  font-size: 14px; /* Ajustado para pantallas pequeñas */
+  font-weight: 300;
+}
+
+.card-additives {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.priority-selector {
+  margin-top: 0px;
+}
+
+.trash-delete {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.red-icon {
+  color: rgb(167, 30, 30);
+}
+
+.red-icon:hover {
+  color: rgb(205, 33, 33);
+}
+
+/* Media Query para pantallas grandes (Desktop) */
+@media (min-width: 768px) {
+  .app {
+    width: 600px; /* Ancho fijo para desktop */
+    padding-top: 20vh;
+  }
+
+  .task-edit {
+    flex-direction: row; /* Cambia a disposición horizontal */
+    align-items: center;
+  }
+
+  .task-form {
+    width: 85%; /* Ajusta el ancho del formulario */
+  }
+
+  .button-container {
+    width: 15%; /* Botón toma menos espacio */
+  }
+
+  .task-card {
+    flex-direction: row; /* Contenido alineado en línea */
+    align-items: center;
+  }
+
+  .custom-checkbox {
+    margin-bottom: 0; /* Sin espacio adicional en desktop */
+    margin-right: 10px; /* Alineación horizontal */
+  }
+
+  .task-content {
+    font-size: 18px; /* Aumenta el tamaño del texto */
+  }
+
+  .title {
+    font-size: 24px; /* Texto más grande */
+  }
+
+  .descrip {
+    font-size: 16px; /* Ajustado para mejor legibilidad */
+  }
+}
