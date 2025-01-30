@@ -31,6 +31,7 @@ git commit -m "primer commit"
 Lo subimos al repositorio en github (Hay que asegurarnos de estar en la rama que queremos pushear)
 ```
 git push -u origin [main] Puede ser en otra rama
+Al hacerlo la primera vez podemos usar -u que le indica que ambos nombres estan vinculados
 ```
 Podemos usar el comando git status para ver el estado
 ```
@@ -42,7 +43,7 @@ git branch nombre-de-la-rama
 ```
 Si queremos crearla y movernos a ella 
 ```
-git checkout -b nombre-de-la-rama (se puede usar switch)
+git checkout -b nombre-de-la-rama (se puede usar switch -c)
 ```
 Y vemos todas las ramas con el comando
 ```
