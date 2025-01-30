@@ -47,7 +47,9 @@ git checkout -b nombre-de-la-rama (se puede usar switch -c)
 ```
 Y vemos todas las ramas con el comando
 ```
+git branch -r 
 git branch (* en la que estamos)
+git log --oneline --graph --all
 ```
 Fusionar ramas> Primero debemos movernos a la rama ala que mergearemos
 ```
