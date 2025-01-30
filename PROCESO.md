@@ -28,7 +28,7 @@ Realizamos el commit
 ```
 git commit -m "primer commit"
 ```
-Lo subimos al repositorio en github
+Lo subimos al repositorio en github (Hay que asegurarnos de estar en la rama que queremos pushear)
 ```
 git push -u origin [main] Puede ser en otra rama
 ```
