@@ -3,6 +3,8 @@ Primero debemos descargar nuestroproyecto en formato .zip
 ```
 sudo apt install git
 ```
+Creamos el repositorio en github y generamos un token concediendole permisos
+Copiamos el token y lo usaremos para el primer push
 Credenciales de git (opcional)
 ```
 git config --global user.name [nombre]
@@ -30,4 +32,32 @@ Lo subimos al repositorio en github
 ```
 git push -u origin [main] Puede ser en otra rama
 ```
-
+Podemos usar el comando git status para ver el estado
+```
+git status
+```
+Añadimos ramas
+```
+git branch nombre-de-la-rama
+```
+Si queremos crearla y movernos a ella 
+```
+git checkout -b nombre-de-la-rama (se puede usar switch)
+```
+Y vemos todas las ramas con el comando
+```
+git branch (* en la que estamos)
+```
+Fusionar ramas> Primero debemos movernos a la rama ala que mergearemos
+```
+git checkout rama-base
+git merge rama-hija
+```
+Eliminar rama local
+```
+git branch -d nombre-de-la-rama
+```
+Eliminar rama github
+```
+git push origin --delete nombre-de-la-rama
+```
