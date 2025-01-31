@@ -116,3 +116,7 @@ Eliminar rama github
 ```
 git push origin --delete nombre-de-la-rama
 ```
+Para ver diferencias si hay conflictos 
+```
+git diff
+```
