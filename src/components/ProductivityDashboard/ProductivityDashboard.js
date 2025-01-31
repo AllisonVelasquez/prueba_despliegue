@@ -156,7 +156,11 @@ const ProductivityDashboard = (props) => {
     <div className="app">
       <div className="task-edit">
         <div className="task-form">
-        <p>Alicia</p>
+
+          <p>Alicia</p>
+
+          <p>Allison</p>
+
           <input
             type="text"
             placeholder="Título de la tarea"
