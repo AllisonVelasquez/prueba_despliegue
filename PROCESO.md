@@ -83,6 +83,7 @@ Hacemos el push para que se suban los cambios y un pull opcional para mantener t
 git push origin [rama]
 git pull origin [rama]
 ```
+A la hora de ocurrir conflictos lo mejor es ver el status (git status) que nos mostrara el conflicto y para verlo (git dif [archivo]), luego modificamos lo que deseemos hacer y una vez solucionado hacemos un add, un commity el push.
 ## Otros comandos
 Ver estado de repositorio o rama actual
 ```
